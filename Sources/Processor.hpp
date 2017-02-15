@@ -40,7 +40,7 @@ namespace hoa
     {
     private:
 
-        const size_t                 m_order_of_decomposition;
+        const size_t                 JucePlugin_HoaOrder_of_decomposition;
         const size_t                 m_number_of_harmonics;
         std::vector< Harmonic<D, T> >    m_harmonics;
     public:
@@ -50,7 +50,7 @@ namespace hoa
          @param order    The order of decomposition \f$N\f$, must be at least 1.
          */
         Harmonics(const size_t order) hoa_noexcept :
-        m_order_of_decomposition(order),
+        JucePlugin_HoaOrder_of_decomposition(order),
         m_number_of_harmonics(Harmonic<D, T>::getNumberOfHarmonics(order))
         {
             for(size_t i = 0; i < m_number_of_harmonics; i++)
@@ -73,7 +73,7 @@ namespace hoa
          */
         inline size_t getDecompositionOrder() const hoa_noexcept
         {
-            return m_order_of_decomposition;
+            return JucePlugin_HoaOrder_of_decomposition;
         }
 
         //! Retrieve the number of harmonics.

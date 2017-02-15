@@ -1225,7 +1225,7 @@ namespace hoa
          */
         inline void setRadius(const T radius) hoa_noexcept
         {
-            m_radius = max(radius, (T)0.);
+            m_radius = std::max(radius, (T)0.);
             T factor, gain, dist;
             if(m_radius < 1.)
             {
